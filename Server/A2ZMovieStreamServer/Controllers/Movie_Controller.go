@@ -73,8 +73,8 @@ func GetMovie(client *mongo.Client) gin.HandlerFunc {
 
 func AddMovie(client *mongo.Client) gin.HandlerFunc {
 	return func(c *gin.Context) {
-		ctx, cancel := context.WithTimeout(c, 100*time.Second)
-		defer cancel()
+		// ctx, cancel := context.WithTimeout(c, 100*time.Second)
+		//defer cancel()
 
 		var movie models.Movie
 		if err := c.BindJSON(&movie); err != nil {
